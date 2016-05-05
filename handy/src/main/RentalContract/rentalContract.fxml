@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * Copyright (c) 2011, 2013 Oracle and/or its affiliates.
+ * All rights reserved. Use is subject to license terms.
+ *
+ * This file is available and licensed under the following license:
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ *  - Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *  - Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the distribution.
+ *  - Neither the name of Oracle Corporation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<GridPane fx:controller="main.RentalContract.RentalContractController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="5" vgap="10"
+          styleClass="root">
+  <padding><Insets top="25" right="25" bottom="10" left="25" /></padding>
+    <Label style="-fx-font: BOLD 12 Tahoma;" text="HANDYMAN TOOLS RENTAL CONTRACT"
+           GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="3"/>
+
+  <Label style="-fx-font: BOLD 10 Tahoma;" text="Reservation Number:"
+         GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <Label fx:id="reservationNumberLabel" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+  <Label style="-fx-font: BOLD 10 Tahoma;" text="Clerk On Duty:"
+         GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+    <Label fx:id="clerkNameLabel" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+  <Label style="-fx-font: BOLD 10 Tahoma;" text="Customer Name:"
+         GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+  <Label fx:id="customerNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+  <Label style="-fx-font: BOLD 10 Tahoma;" text="Credit Card #:"
+         GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+
+    <Label fx:id="creditCardNumberLabel" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+  <Label style="-fx-font: BOLD 10 Tahoma;" text="Start Date:"
+         GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+    <Label fx:id="startDateLabel" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+  <Label style="-fx-font: BOLD 10 Tahoma;" text="End Date:"
+         GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+    <Label fx:id="endDateLabel" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+
+  <Label style="-fx-font: BOLD 10 Tahoma;"  text="Tools Rented:"
+         GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+  <GridPane fx:id = "toolsList"
+            GridPane.rowIndex="5">
+    <children></children>
+  </GridPane>
+
+
+  <Label style="-fx-font: BOLD 10 Tahoma;"  text="Deposit Held:"
+         GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+
+    <Label fx:id="depositLabel" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+  <Label style="-fx-font: BOLD 10 Tahoma;"  text="Estimated Rental:"
+         GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+
+    <Label fx:id="estimatedRental" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+  <Label style="-fx-font: BOLD 10 Tahoma;"  text="Signature: ______________________________"
+         GridPane.columnIndex="0" GridPane.rowIndex="11" GridPane.columnSpan="3" />
+
+  <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="12">
+    <children>
+      <Button onAction="#handleBackToMainMenuButtonAction" text="Back To Main Menu" />
+    </children>
+  </HBox>
+
+</GridPane>

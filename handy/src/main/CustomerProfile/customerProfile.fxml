@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import java.awt.ScrollPane?>
+
+<!--
+ * Copyright (c) 2011, 2013 Oracle and/or its affiliates.
+ * All rights reserved. Use is subject to license terms.
+ *
+ * This file is available and licensed under the following license:
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ *  - Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *  - Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the distribution.
+ *  - Neither the name of Oracle Corporation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ScrollPane?>
+
+
+
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.CustomerProfile.CustomerProfileController" prefHeight="800" prefWidth="800">
+    <children>
+        <GridPane alignment="center" hgap="20" prefWidth="800.0" styleClass="root" vgap="10">
+            <padding>
+                <Insets bottom="10" left="25" right="25" top="25" />
+            </padding>
+            <children>
+
+                <Label style="-fx-font: NORMAL 20 Tahoma;" text="Profile" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+
+                <Label text="Email Address:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                <Text fx:id="email" wrappingWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                <Text fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Home Phone:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                <Text fx:id="homePhone" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Work Phone:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+
+                <Text fx:id="workPhone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+
+                <Text fx:id="address" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label text="Reservations History" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+
+                <Text fx:id="reservationsHistory" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                <!--<HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="9" />-->
+            </children>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+
+        </GridPane>
+        <ScrollPane fx:id="reservationsHistoryScroll" prefHeight="400.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+            <content>
+                <GridPane fx:id="historyGrid" alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                </GridPane>
+            </content>
+            <padding>
+                <Insets bottom="2.0" left="6.0" right="6.0" top="2.0" />
+            </padding>
+            <VBox.margin>
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </VBox.margin>
+        </ScrollPane>
+        <Button onAction="#handleOKButtonAction" prefHeight="39.0" prefWidth="124.0" text="OK" />
+    </children>
+    <padding>
+        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+    </padding>
+
+
+</VBox>

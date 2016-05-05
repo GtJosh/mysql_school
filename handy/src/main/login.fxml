@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="main.LoginController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+
+        <Label text="Login:"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+        <TextField fx:id="LoginIDField"
+                GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="0"/>
+
+        <Label text="Password:"
+               GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+        <PasswordField fx:id="passwordField"
+                       GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1"/>
+
+        <VBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <fx:define>
+        <ToggleGroup fx:id="loginTypeToggleGroup"/>
+        </fx:define>
+        <children>
+        <RadioButton fx:id="clerkRadioButton" toggleGroup="$loginTypeToggleGroup"
+        GridPane.columnIndex="0" GridPane.rowIndex="2" text="Clerk" selected="true"/>
+
+        <RadioButton toggleGroup="$loginTypeToggleGroup"
+        GridPane.columnIndex="1" GridPane.rowIndex="2" text="Customer"/>
+        </children>
+        </VBox>
+
+        <HBox spacing="10" alignment="bottom_right"
+              GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button text="Enter"
+                    onAction="#handleLoginButtonAction"/>
+        </HBox>
+
+        <Text fx:id="actiontarget"
+              GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+</GridPane>

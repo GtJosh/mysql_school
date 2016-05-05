@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="main.PickUpResNumber.PickUpResNumberController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+
+        <Label text="Reservation Number:"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+        <TextField fx:id="pickUpResNumb"
+                GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+
+        <HBox spacing="10" alignment="bottom_right"
+              GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button text="Enter"
+                    onAction="#handleEnterButtonAction"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="bottom_left"
+              GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <Button text="Back To Main Menu"
+                    onAction="#handleBackToMainMenuButtonAction"/>
+        </HBox>
+</GridPane>

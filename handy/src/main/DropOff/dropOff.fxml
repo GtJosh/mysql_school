@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<GridPane alignment="center" hgap="10" styleClass="root" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.DropOff.DropOffController">
+    <padding>
+        <Insets bottom="10" left="25" right="25" top="25" />
+    </padding>
+   <children>
+   
+       <Label style="-fx-font: BOLD 12 Tahoma;" text="Reservation Number:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+   
+       <Label fx:id="rn" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+   
+       <!--Need SQL query to populate Reservation Number field?-->
+   
+       <Label style="-fx-font: BOLD 12 Tahoma;" text="Tools Required:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+   
+   
+       <Label style="-fx-font: BOLD 12 Tahoma;" text="Deposit Required:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+   
+       <Label fx:id="dr" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   
+       <!--Application math for Deposit Required to populate field??-->
+   
+       <Label style="-fx-font: BOLD 12 Tahoma;" text="Estimated Cost:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+   
+       <Label fx:id="ec" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   
+       <!--Application math for Estimated Costs to populate field??-->
+   
+   
+       <Label text="Tool ID" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+   
+       <TextField fx:id="toolIDField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   
+       <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="5">
+      <children>
+              <Button onAction="#handleViewDetailsButtonAction" text="View Details" />
+      </children>
+       </HBox>
+   
+       <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="6">
+      <children>
+              <Button onAction="#handleDropOffButtonAction" text="Complete Drop-Off" />
+      </children>
+       </HBox>
+   
+       <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+      <children>
+              <Button onAction="#handleBackToMainMenuButtonAction" text="Back To Main Menu" />
+      </children>
+       </HBox>
+
+      <GridPane fx:id = "rob"
+      GridPane.rowIndex="2">
+          <children></children>
+      </GridPane>
+
+
+
+</children>
+
+</GridPane>

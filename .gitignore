@@ -1,0 +1,13 @@
+.vs/
+bin/
+obj/
+*.exe
+*.msi
+
+.idea
+.iml
+*.class
+build/
+*.iml
+.gradle/
+.idea/
